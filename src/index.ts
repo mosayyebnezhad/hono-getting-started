@@ -6,6 +6,8 @@ const app = new Hono()
 
 
 app.use('/static/*', serveStatic({ root: './' }))
+app.use('/BeautifulPeople.ttf', serveStatic({ path: '/static/BeautifulPeople.ttf' }))
+
 app.get('/', serveStatic({ path: '/static/index.html'}));
 
 const port = 3000
